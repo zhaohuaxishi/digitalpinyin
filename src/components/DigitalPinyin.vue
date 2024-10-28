@@ -3,6 +3,8 @@ import { computed, ref, watch } from 'vue'
 import { pinyinDataBase, PinyinPronunciation } from '../database'
 import { Headset, Promotion, RefreshRight } from '@element-plus/icons-vue'
 import { shuffle } from 'lodash'
+import rightAudio from "../assets/right.wav"
+import vectoryAudio from "../assets/vectory.wav"
 
 const btnTypeList = ["primary", "success", "info", "warning", "danger"]
 
@@ -39,6 +41,7 @@ const onPinyinSelected = (clickedItem: DigitalPinyin) => {
     let selectedPinyin = selectedPinyinList.value.find((pinyin) => pinyin.id === clickedItem.id)
     if (selectedPinyin && selectedPinyin.btnType != item.btnType) {
       rate.value = rate.value + 1
+      playAudioUri(rightAudio)
     } else {
       playAudio(clickedItem)
     }
@@ -56,8 +59,11 @@ const selectedPinyinList = computed((): DigitalPinyin[] => {
 })
 
 const playAudio = (item: DigitalPinyin) => {
-  const audio = new Audio(item.uri)
-  audio.play()
+  playAudioUri(item.uri)
+}
+
+const playAudioUri = (uri: string) => {
+  new Audio(uri).play()
 }
 
 // 计算的结果
@@ -69,6 +75,7 @@ const calculate = () => {
   let target = values.reduce((previous, current) => { return previous + current }, 0)
   console.log(target, sum.value)
   if (sum.value == target) {
+    playAudioUri(vectoryAudio)
     rate.value = 10
   }
 }

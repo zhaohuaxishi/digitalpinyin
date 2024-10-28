@@ -150,27 +150,27 @@ export const pinyinUnitThree: PinyinUnit = {
     label: "g k h j q x", data: [
         {
             "id": "g",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/g.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/g.mp3"
         },
         {
             "id": "k",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/k.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/k.mp3"
         },
         {
             "id": "h",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/h.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/h.mp3"
         },
         {
             "id": "j",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/j.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/j.mp3"
         },
         {
             "id": "q",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/q.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/q.mp3"
         },
         {
             "id": "x",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/g.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/x.mp3"
         },
     ]
 }
@@ -179,39 +179,39 @@ export const pinyinUnitFour: PinyinUnit = {
     label: "zh ch sh r z c s", data: [
         {
             "id": "zh",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/zh.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/zh.mp3"
         },
         {
             "id": "ch",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/ch.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/ch.mp3"
         },
         {
             "id": "sh",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/sh.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/sh.mp3"
         },
         {
             "id": "r",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/r.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/r.mp3"
         },
         {
             "id": "z",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/z.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/z.mp3"
         },
         {
             "id": "c",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/c.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/c.mp3"
         },
         {
             "id": "s",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/s.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/s.mp3"
         },
         {
             "id": "y",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/y.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/y.mp3"
         },
         {
             "id": "w",
-            "uri": "http://du.hanyupinyin.cn/du/pinyin/w.mp4"
+            "uri": "http://du.hanyupinyin.cn/du/pinyin/w.mp3"
         },
     ]
 }
