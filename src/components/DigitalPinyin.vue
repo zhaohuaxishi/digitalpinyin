@@ -31,8 +31,6 @@ watch(digitalPinyinList, async () => {
 })
 
 const onPinyinSelected = (clickedItem: DigitalPinyin) => {
-  playAudio(clickedItem)
-
   pinyinList.value = pinyinList.value.map((item) => {
     if (item.id !== clickedItem.id) {
       return item
@@ -41,6 +39,8 @@ const onPinyinSelected = (clickedItem: DigitalPinyin) => {
     let selectedPinyin = selectedPinyinList.value.find((pinyin) => pinyin.id === clickedItem.id)
     if (selectedPinyin && selectedPinyin.btnType != item.btnType) {
       rate.value = rate.value + 1
+    } else {
+      playAudio(clickedItem)
     }
 
     return selectedPinyin ? selectedPinyin : item
