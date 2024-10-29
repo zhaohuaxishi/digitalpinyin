@@ -39,14 +39,21 @@ const onPinyinSelected = (clickedItem: DigitalPinyin) => {
     }
 
     let selectedPinyin = selectedPinyinList.value.find((pinyin) => pinyin.id === clickedItem.id)
-    if (selectedPinyin && selectedPinyin.btnType != item.btnType) {
-      rate.value = rate.value + 1
-      playAudioUri(rightAudio)
-    } else {
+    if (!selectedPinyin || selectedPinyin.btnType == item.btnType) {
       playAudio(clickedItem)
+      return item
     }
 
-    return selectedPinyin ? selectedPinyin : item
+    let index = selectedPinyinList.value.indexOf(selectedPinyin)
+    let correctCount = pinyinList.value.filter((pinyin) => pinyin.btnType !== "default").length
+    if (index == correctCount) {
+      rate.value = rate.value + 1
+      playAudioUri(rightAudio)
+      return selectedPinyin
+    } else {
+      playAudio(clickedItem)
+      return item
+    }
   })
 }
 
