@@ -92,13 +92,14 @@ const refreshContent = () => {
   pinyinNumber.value = randomNumber()
   pinyinList.value = [...digitalPinyinList.value]
   rate.value = 0
+  sum.value = 0
 }
 
 </script>
 
 <template>
   <div class="d-flex flex-row justify-content-center align-items-center m-3">
-    <el-select v-model="selectedUnit" style="width: 240px">
+    <el-select v-model="selectedUnit" style="width: 240px" @change="refreshContent">
       <el-option v-for="(item, index) in pinyinUnitOption" :key="item.value" :label="item.label" :value="index" />
     </el-select>
   </div>
