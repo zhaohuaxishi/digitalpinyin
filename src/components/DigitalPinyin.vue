@@ -16,7 +16,7 @@ interface DigitalPinyin extends PinyinPronunciation {
 const selectedUnit = ref(0)
 const pinyinUnitOption = pinyinDataBase.map((item) => ({
   value: item.label,
-  label: item.label
+  label: item.name + "：" + item.label
 }))
 
 // 用户选择单元之后，动态变更单元数据
@@ -58,7 +58,7 @@ const onPinyinSelected = (clickedItem: DigitalPinyin) => {
 }
 
 // 随机选出一些用于做加法的值
-const randomNumber = () => Math.floor(Math.random() * 4) + 2
+const randomNumber = () => Math.floor(Math.random() * 3) + 2
 const pinyinNumber = ref(randomNumber())
 const selectedPinyinList = computed((): DigitalPinyin[] => {
   let pyinListCopy = shuffle(digitalPinyinList.value)
@@ -123,7 +123,7 @@ const refreshContent = () => {
   <el-divider />
 
   <div class="d-flex flex-row justify-content-center align-items-center m-1">
-    <el-input-number v-model="sum" />
+    <el-input-number v-model="sum"/>
     <el-button :icon="Promotion" @click="calculate" class="ms-3" />
     <el-button :icon="RefreshRight" @click="refreshContent" />
   </div>
